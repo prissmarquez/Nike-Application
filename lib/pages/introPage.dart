@@ -23,7 +23,7 @@ class introPage extends StatelessWidget {
                   ),
               ),
           
-              SizedBox(height: 15.0),
+              //SizedBox(height: .0),
           
               //title
               Text(
@@ -34,7 +34,7 @@ class introPage extends StatelessWidget {
                 ) 
                 ),
               
-              SizedBox(height: 30,),
+              SizedBox(height: 15,),
           
               //sub title
               Text(
@@ -46,24 +46,31 @@ class introPage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
         
-              SizedBox(height: 40,),
+              SizedBox(height: 90,),
         
               //start button 
-              Container(
-                decoration:BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                padding: EdgeInsets.all(25),
-                child: Center(
-                  child: Text(
-                    "Shop Now"
-                    ,style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16
+              GestureDetector(
+                onTap: () => Navigator.push
+                 (context,
+                 MaterialPageRoute
+                 (builder: (context) => HomePage())
+                 ),
+                child: Container(
+                  decoration:BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                              ),
+                  padding: EdgeInsets.all(25),
+                  child: Center(
+                    child: Text(
+                      "Shop Now"
+                      ,style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                    ),
+                                ),
+                  ),
                 ),
               ),
             ],
