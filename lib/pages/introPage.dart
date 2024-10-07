@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naiki/pages/HomePage.dart';
 
 class introPage extends StatelessWidget {
   const introPage({super.key});
