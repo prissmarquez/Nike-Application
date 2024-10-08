@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:naiki/components/bottom_nav_bar.dart';
+import 'package:naiki/pages/bagPage.dart';
+import 'package:naiki/pages/shopPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,6 +21,16 @@ class _HomePageState extends State<HomePage> {
     _selectedIndex = index;
   });
  }
+
+ //pages to display 
+ final List<Widget> _pages = [
+  //shop page 
+  ShopPage (),
+
+  //bag page
+  BagPage (),
+ ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +38,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => navigationbottonbar (index),
       ),
+      body: _pages[_selectedIndex],
     );
   }
 }
