@@ -58,13 +58,14 @@ class _ShopPageState extends State<ShopPage> {
               return ShoeTile (
                 shoe: shoe,
               );
-            }
-          )
+            },
           ),
+          ),
+
           Padding(
-            padding: const EdgeInsets.only(top: 20.0, left: 25, right: 25),
+            padding: const EdgeInsets.only(top: 25.0, left: 25, right: 25),
             child: Divider(
-              color: const Color.fromARGB(206, 222, 222, 222),
+              color: Colors.white
             ),
           )
         ]

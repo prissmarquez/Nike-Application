@@ -45,12 +45,14 @@ class ShoeTile extends StatelessWidget {
                     ),),
             
                     SizedBox(height: 5,),
+                    
                     //price
                     Text( shoe.price, style: TextStyle(
                       color: Colors.black
                     ),)
                   ],
                 ),
+
                  //button to add to bag
                   Container(
                     padding: EdgeInsets.all(20),

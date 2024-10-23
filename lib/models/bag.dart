@@ -3,7 +3,7 @@ import 'package:naiki/models/shoe.dart';
 
 class Cart extends ChangeNotifier{
   //List of shoes for sale 
-  List <Shoe> shopShop = [
+  List <Shoe> shoeShop = [
     Shoe(
       name: "Nike Blazer Low", 
       price: "1919 MXN", 
@@ -17,9 +17,9 @@ class Cart extends ChangeNotifier{
       description: "El fulgor vive en el Nike Air Force 1 '07, el modelo icónico de básquetbol que da un toque novedoso a las características más recordadas: revestimientos con costuras duraderas, acabados impecables y la cantidad perfecta de destellos para que brilles."),
 
     Shoe(
-      name: "Nike Pegasus Trail 5 GORE-TEX", 
+      name: "Nike Pegasus Trail", 
       price: "3099 MXN", 
-      imagePath: "lib/images/NikePagasusTrail.png", 
+      imagePath: "lib/images/NikePegasusTrail.png", 
       description: "Confía plenamente en el color con un par de Blazers de color rosa sólido. El tono pastel crea un diseño monocromático atractivo pero sencillo. Versátil, con un cuello de corte low, este calzado combina con numerosos atuendos."),
     
     Shoe(
@@ -40,7 +40,7 @@ class Cart extends ChangeNotifier{
 
   //get cart
   List <Shoe> getShoeList() {
-    return shopShop;
+    return shoeShop;
   }
   //add items to cart
   void addItemToCart(Shoe shoe) {
