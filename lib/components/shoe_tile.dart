@@ -3,6 +3,7 @@ import 'package:naiki/models/shoe.dart';
 
 class ShoeTile extends StatelessWidget {
  Shoe shoe;
+ void Function()? onTap;
   ShoeTile ({super.key, required this.shoe});
 
   @override
@@ -24,10 +25,13 @@ class ShoeTile extends StatelessWidget {
             ),
 
           //description
-          Text(
-            shoe.description,
-            style: TextStyle(color: Colors.black, ),
-            ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              shoe.description,
+              style: TextStyle(color: Colors.black, ),
+              ),
+          ),
 
           //price + details
           Padding(
@@ -54,10 +58,19 @@ class ShoeTile extends StatelessWidget {
                 ),
 
                  //button to add to bag
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.only(topLeft: Radius.circular(12))),
-                    child: Icon(Icons.add, color: Colors.white,),
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.black, 
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(12),
+                          bottomRight: Radius.circular(12)
+                          )
+                      ),
+                      child: Icon(Icons.add, color: Colors.white,),
+                    ),
                   )
               ],
             ),
