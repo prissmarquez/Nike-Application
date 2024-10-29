@@ -4,7 +4,7 @@ import 'package:naiki/models/shoe.dart';
 class ShoeTile extends StatelessWidget {
  Shoe shoe;
  void Function()? onTap;
-  ShoeTile ({super.key, required this.shoe});
+  ShoeTile ({super.key, required this.shoe, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
