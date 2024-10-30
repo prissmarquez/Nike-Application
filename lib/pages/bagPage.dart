@@ -27,10 +27,10 @@ class BagPage extends StatelessWidget {
 
                Expanded(
                 child: ListView.builder(
-                  itemCount:value.getShoeList(). length ,
+                  itemCount:value.getuserCart(). length ,
                   itemBuilder: (context, index){
                   //get indivual shoe 
-                  Shoe individualShoe = value.getShoeList()[index];
+                  Shoe individualShoe = value.getuserCart()[index];
                   //return the cart item 
                   return CartItem(shoe: individualShoe,);
                  },
